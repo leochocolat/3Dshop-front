@@ -1,0 +1,21 @@
+#shop {
+
+  .container-content {
+    padding-top: 180px;
+  }
+
+  .container-description {
+    margin: 70px;
+
+    .desc-product {
+      z-index: 10;
+      margin-top: 70px;
+    }
+
+    #canas-scene {
+      z-index: 1;
+    }
+  }
+
+
+}
