@@ -1,0 +1,36 @@
+.loader {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  overflow: hidden;
+  max-height: 100vh;
+
+  .image-container {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .line {
+    opacity: 0;
+    color: $brand;
+    text-transform: uppercase;
+    font-family: $blackcond;
+    white-space: nowrap;
+
+    .brand {
+      display: inline-block;
+      font-size: 200px;
+    }
+  }
+
+
+}

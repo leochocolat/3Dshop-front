@@ -1,0 +1,160 @@
+#home {
+  overflow-x: hidden; 
+
+  #canvas-scene {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  }
+
+  .container-content {
+    .btn-container {
+      z-index: 1000;
+      position: absolute;
+      right: 150px;
+      top: 50%;
+      transform: translate(50%, -50%);
+
+      .cross-btn {
+        transition: ease-in-out .3s background-color;
+        border: solid 1.5px white;
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        transform: rotate(45deg);
+
+        &:before, &:after {
+          transition: ease-in-out .2s background-color;
+          content: '';
+          width: 60%;
+          height: 1.5px;
+          background-color: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+        }
+        &:before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+          cursor: pointer;
+          transition: ease-in-out .2s background-color;
+          background-color: white;
+          &:before, &:after {
+            transition: ease-in-out .2s background-color;
+            background-color: black;
+          }
+        }
+      }
+    }
+
+
+
+    .container-colors {
+      z-index: 1000;
+      position: absolute;
+      top: 50%;
+      left: 150px;
+      transform: translate(-50%, -50%);
+
+      .colors-btn {
+        border-radius: 50%;
+        display: block;
+        margin: 20px 0;
+        width: 30px;
+        height: 30px;
+
+        &.white {
+          background-color: $shoes-color0;
+        }
+        &.green {
+          background-color: $shoes-color1;
+        }
+        &.purple {
+          background-color: $shoes-color2;
+        }
+        &.red {
+          background-color: $shoes-color3;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+
+    }
+
+
+
+
+    // #canvas-scene2 {
+    //   width: 100%;
+    //   height: 100vh;
+    //   position: absolute;
+    //   top: 0;
+    //   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    //   animation: clipAnim 5s forwards 5s;
+    //
+    //   @keyframes clipAnim {
+    //     from {
+    //       clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    //     }
+    //     to {
+    //       clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    //     }
+    //   }
+    // }
+
+    .btn-hold-container {
+      z-index: 10000;
+      width: 100%;
+      height: 20%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .btn-hold {
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: solid 2.5px white;
+        text-align: center;
+        transition: ease-in-out .3s background-color;
+
+        &:hover {
+          transition: ease-in-out .3s background-color;
+          background-color: white;
+          cursor: pointer;
+        }
+      }
+      .label-btn {
+        font-size: 15px;
+        padding: 15px 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $light;
+        animation: blink 1.5s infinite;
+
+        @keyframes blink {
+          0% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
