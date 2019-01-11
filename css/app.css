@@ -49,7 +49,7 @@ a {
   width: 13px;
   height: 13px;
   background-color: rgba(38, 255, 116, 0.2);
-  visibility: hidden;
+  opacity: .3;
   border-radius: 50%;
   pointer-events: none; }
 
@@ -226,6 +226,17 @@ header {
     height: 100vh;
     position: absolute;
     top: 0; }
+  #home .container-content .hold {
+    z-index: 100000;
+    font-size: 200px;
+    font-family: "helveticaneueblackcond", Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    visibility: hidden; }
   #home .container-content .btn-container {
     z-index: 1000;
     position: absolute;

@@ -27,12 +27,12 @@ function init() {
   light1.position.set(-100, -250, 100);
   scene.add(light1);
 
-  var keyLight = new THREE.DirectionalLight(new THREE.Color(0xffffff), 0.5);
+  var keyLight = new THREE.DirectionalLight(new THREE.Color(0xffffff), 1);
   keyLight.position.set(-100, 0, 100);
-  var fillLight = new THREE.DirectionalLight(new THREE.Color(0xffffff), 0.75);
+  var fillLight = new THREE.DirectionalLight(new THREE.Color(0xffffff), 1);
   fillLight.position.set(100, 0, 100);
   var backLight = new THREE.DirectionalLight(0xffffff, 1);
-  backLight.position.set(100, 0, -100).normalize();
+  backLight.position.set(100, 0, -100);
 
   scene.add(keyLight);
   scene.add(fillLight);
@@ -95,6 +95,14 @@ function myLoader() {
                    node.material.wireframe = true;
                  }
               });
+
+              let hold = new TimelineMax();
+
+
+              TweenMax.to(".hold", .01, {autoAlpha: 1})
+
+
+
           },1);
 
           this.timerId = setTimeout(function() {
@@ -105,6 +113,7 @@ function myLoader() {
                  node.material.color = new THREE.Color(newColor);
                }
             });
+            TweenMax.to(".hold", .01, {autoAlpha: 0})
           },500);
        };
 
@@ -120,6 +129,7 @@ function myLoader() {
                  }
               });
            }
+           TweenMax.to(".hold", .01, {autoAlpha: 0})
        }
     }
 

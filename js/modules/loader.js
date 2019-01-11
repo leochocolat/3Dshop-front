@@ -119,6 +119,9 @@ function update() {
     resize();
     explosion();
   }, 8 * timing);
+  setTimeout(function() {
+    $(".loader").css("display", "none");
+  }, 9 * timing);
 
 }
 

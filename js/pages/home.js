@@ -3,5 +3,5 @@ $(".cross-btn, .colors-btn").mouseover(function() {
 });
 
 $(".cross-btn, .colors-btn").mouseleave(function() {
-  TweenMax.to(".fake-cursor", .5, {autoAlpha: 0, width: 13, height: 13, x: "0", y: "0", ease: Power3.easeOut});
+  TweenMax.to(".fake-cursor", .5, {autoAlpha: .3, width: 13, height: 13, x: "0", y: "0", ease: Power3.easeOut});
 });

@@ -1,5 +1,5 @@
 #home {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 
   #canvas-scene {
     width: 100%;
@@ -9,6 +9,18 @@
   }
 
   .container-content {
+
+    .hold {
+      z-index: 100000;
+      font-size: 200px;
+      font-family: $blackcond;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+    }
+
     .btn-container {
       z-index: 1000;
       position: absolute;
